@@ -1,0 +1,171 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid black 1px;
+}
+
+.navbar__input{
+    border: solid black 1px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    padding: 3px;
+}
+
+.navbar__input input:focus{
+    outline: none;
+}
+
+.navbar__list{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.list{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    border: solid black 1px;
+}
+
+.list p{
+    padding: 10px;
+    background-color: #863DB5;
+    color: white;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border: solid #863DB5 1px;
+}
+
+
+.list p:hover{
+    background-color: transparent;
+    color: black;
+    border: solid #863DB5 1px;
+    transition: 2s;
+}
+
+.saleimg{
+    position: relative;
+}
+
+.saleimg__offer{
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    padding: 10px;
+    background-color: white;
+    border: solid black 1px;
+    animation: zoom 2s normal forwards;
+    opacity: 0;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }    
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.coursecard__images{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.coursecard__images__s1{
+    margin-top: 10px;
+    width: 22%;
+}
+
+.coursecard__images img{
+    width: 100%;
+    height: 150px;
+}
+
+span{
+    text-decoration: line-through;
+}
+
+.topics__list{
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.topics__list p{
+    margin-top: 10px;
+    border: solid black 1px;
+    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 25%;
+}
+
+.popularcourse__images{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.popularcourse__images__s1{
+    margin-top: 10px;
+    width: 22%;
+}
+
+.popularcourse__images img{
+    width: 100%;
+    height: 150px;
+}
+
+.footer__list{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.footer__list__s1 li{
+    margin: 20px;
+}
+
+.footer__bottom{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* media screen */
+
+@media screen and (max-width:800px) {
+    body{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .coursecard__images{
+        flex-basis: 40%;
+    }
+    .list{
+        display: none;
+    }
+
+    .navbar__input,.navbar__list{
+        display: none;
+    }
+}
